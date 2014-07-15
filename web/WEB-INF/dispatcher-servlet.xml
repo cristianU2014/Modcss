@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                            http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+                            http://www.springframework.org/schema/aop 
+                            http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+                            http://www.springframework.org/schema/tx 
+                            http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+                            http://www.springframework.org/schema/mvc 
+                            http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd" 
+        xmlns:mvc="http://www.springframework.org/schema/mvc">
+    
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+
+    <!--
+    Most controllers will use the ControllerClassNameHandlerMapping above, but
+    for the index controller we are using ParameterizableViewController, so we must
+    define an explicit mapping for it.
+    -->
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="index.htm">indexController</prop>
+                <prop key="usuario/lista.htm">usuarioController</prop>
+                <prop key="usuario/crear.htm">usuarioController</prop>
+                <prop key="usuario/login.htm">usuarioController</prop>
+                <prop key="usuario/iniciarSesion.htm">usuarioController</prop>
+                <prop key="usuario/cambiarContrasena.htm">usuarioController</prop>
+                <prop key="usuario/recuperarComtra.htm">usuarioController</prop>
+                <prop key="usuario/editar/{1}.htm">usuarioController</prop>
+                <prop key="usuario/borrar/{1}.htm">usuarioController</prop>
+                
+                <prop key="modelo/abrir.htm">modeloController</prop>
+                <prop key="modelo/crearModelo.htm">modeloController</prop>
+                <prop key="modelo/editarModelo/{1}.htm">modeloController</prop>
+                <prop key="modelo/borrarModelo/{1}.htm">modeloController</prop>
+                
+                <prop key="/resources/index.htm">cadController</prop>
+                
+                <prop key="rol/crear.htm">rolController</prop>
+                <prop key="rol/lista.htm">rolController</prop>
+                <prop key="rol/borrarRol/{1}.htm">rolController</prop>
+                
+                <prop key="elemento/crear/{1}.htm">elementoGraficoController</prop>
+                <prop key="elemento/lista.htm">elementoGraficoController</prop>
+                <prop key="elemento/borrar/{1}.htm">elementoGraficoController</prop>
+                
+                <prop key="sentencia/crear/{1}.htm">sentenciaController</prop>
+                <prop key="sentencia/lista.htm">sentenciaController</prop>
+                <prop key="sentencia/borrar/{1}.htm">sentenciaController</prop>
+                
+                <prop key="programa/crear/{1}.htm">progrmaController</prop>
+                <prop key="programa/lista.htm">progrmaController</prop>
+                <prop key="programa/borrar/{1}.htm">progrmaController</prop>
+                
+                <prop key="cad/cad.htm">cadController</prop>
+                
+                <prop key="linea/lista.htm">lineaController</prop>
+                <prop key="linea/crear.htm">lineaController</prop>
+                <prop key="linea/obtener.htm">lineaController</prop>
+                <prop key="linea/actualizar.htm">lineaController</prop>
+                <prop key="linea/borrar.htm">lineaController</prop>
+                
+                <prop key="arco/crear.htm">arcoController</prop>
+                <prop key="arco/obtener.htm">arcoController</prop>
+                <prop key="arco/actualizar.htm">arcoController</prop>
+                <prop key="arco/borrar.htm">arcoController</prop>
+                <prop key="arco/lista.htm">arcoController</prop>
+                
+                <prop key="texto/crear.htm">textoController</prop>
+                <prop key="texto/obtener.htm">textoController</prop>
+                <prop key="texto/actualizar.htm">textoController</prop>
+                <prop key="texto/borrar.htm">textoController</prop>
+
+               
+            </props>
+        </property>
+    </bean>
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/jsp/"
+          p:suffix=".jsp" />
+
+    <!--
+    The index controller.
+    -->
+    <bean name="indexController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="index" />
+    
+     <bean name="usuarioController"
+          class="com.opencnc.controllers.UsuarioController"
+           />
+     
+    <bean name="cadController"
+          class="com.opencnc.controllers.CadController"
+           />
+    
+    <bean name="modeloController"
+          class="com.opencnc.controllers.ModeloController"
+           />
+    
+    <bean name="rolController"
+          class="com.opencnc.controllers.RolController"
+           />
+    
+    <bean name="sentenciaController"
+          class="com.opencnc.controllers.SentenciaController"
+           />
+    
+    <bean name="elementoGraficoController"
+          class="com.opencnc.controllers.ElementoGraficoController"
+           />
+    
+    <bean name="progrmaController"
+          class="com.opencnc.controllers.ProgramaController"
+           />
+    <bean name="comandoController"
+          class="com.opencnc.controllers.ComandoController"
+           />
+   
+    <bean name="lineaController" 
+          class="com.opencnc.controllers.LineaController" 
+           />
+    
+    <bean name="arcoController" 
+          class="com.opencnc.controllers.ArcoController" 
+           />
+    
+    <bean name="textoController" 
+          class="com.opencnc.controllers.TextoController" 
+           />
+   
+    
+    <mvc:resources mapping="/resources/**" location="classpath:/resources" />
+
+    <mvc:annotation-driven />
+    
+    
+   
+</beans>

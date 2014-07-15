@@ -1,0 +1,239 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08-jul-2014, 19:59:15
+    Author     : CRISTIAN
+*/
+@charset "utf-8";
+/* CSS Document */
+body{
+    background: #FFFFFF
+}
+#ContPrincipal {
+        margin: auto;
+        margin-top: 0px;
+        width: 970px;
+        height: 800px;
+        border: 20px; 
+        border-radius: 35px / 20px;
+	box-shadow: rgb(150,150,150) 1px 5px 5px 5px;
+	outline-offset: 15px;
+         
+ }
+#forHeader {
+	display: block;
+	width: 880px;
+	margin: 10px auto;
+	padding: 15px;
+	text-align: center;
+	border: 28px; 
+	-moz-border-image: url("imagen.png") 28 stretch;
+	-webkit-border-image: url("imagen.png") 28 stretch;
+	border-image: url("imagen.png") 28 stretch;	
+	background: #DDDDDD;
+	border-radius: 35px / 20px;
+	box-shadow: rgb(150,150,150) 5px 5px 10px;
+	background: -webkit-radial-gradient(center, circle, #FFFFFF 15%, #006699 200%);
+	background: -moz-radial-gradient(center, circle, #FFFFFF 15%, #006699 200%);
+	outline-offset: 15px;
+
+	-moz-transition: -moz-transform 1s ease-in-out 0.5s;
+	-webkit-transition: -webkit-transform 1s ease-in-out 0.5s;
+}
+
+#forHeader:hover{
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+
+}
+
+#titulo {
+	font: bold 36px "source_sans_proextralight", verdana, sans-serif;
+	text-shadow: rgba(0,0,150,.5) 3px 3px 5px;
+	color: hsla(220, 40%, 60%, 0.5);
+}
+
+
+// css menus hori
+
+#cssmenu {        
+            width:55%;
+            height: 100px;
+            background-color: #62a8f6;
+            border-top-left-radius:34px;
+            border-top-right-radius:34px;
+            border-bottom-left-radius:34px;
+            border-bottom-right-radius:34px;
+            position: absolute;
+        }
+    #cssmenu ul {
+      
+        background-position: center;
+        list-style-type:none;
+        height: 45px;
+        width: 930px;
+        margin: auto;
+        position:relative;
+        display:block;
+        background: -webkit-radial-gradient(center, circle, #FFFFFF 15%, #006699 200%);
+	background: -moz-radial-gradient(center, circle, #FFFFFF 15%, #006699 200%);
+        
+    }
+    #cssmenu li a{
+       float: left;
+       background-color: #d4eaff; //color boton menu H
+       margin:0px;
+       border:solid 1px #f9f9f9;
+       border-radius:15px;
+       
+       
+    }
+    #cssmenu li a:hover {
+              background:linear-gradient(#d4eaff 0%, #FFF 100%);
+              background:-moz-linear-gradient(#d4eaff 0%, #FFF 100%);
+              background:-ms-linear-gradient(#d4eaff 0%, #FFF 100%);
+              background:-o-linear-gradient(#d4eaff 0%, #FFF 100%);
+              background:-webkit-linear-gradient(#d4eaff 0%, #FFF 100%);
+              border-radius:15px;
+              border:solid 4px #877AFC;
+              color: #648B7C;
+    }
+
+    #cssmenu ul a {
+        
+        padding-right: 23px;
+        padding-left: 23px;
+        display: block;
+        line-height: 40px;
+        text-decoration: none;
+        font-family: Georgia, "Times New Roman", Times, serif, fantasy;
+        font-size: 14px;
+        //color: #FC4A04; 
+        color: #06F;
+    }         
+
+
+
+#menuVertical ul{
+                display: block;
+                margin-top: 15px;
+                margin-left: auto;
+                margin-right: 10px;
+                position: relative;
+                border:solid 5px #7676A8; // ori 8181F7
+                border-radius:9px;
+                width:160px;
+                float: left;
+                clear: left;
+                padding:10px;
+                /*Quitar vineras*/
+                list-style-type:none;
+                background: -webkit-radial-gradient(center, circle, #FFFFFF 15%, #006699 200%);
+                background: -moz-radial-gradient(center, circle, #FFFFFF 15%, #006699 200%);
+            }
+            
+            #menuVertical ul a{
+                /*Quitar subrayado*/
+                text-decoration: none;
+                //ackground-position: center;
+                padding-right: 22px;
+                padding-left: 22px;
+                display: block;
+                line-height: 25px;
+                font-family: Georgia, "Times New Roman", Times, serif, fantasy;
+                font-size: 12px;
+            }
+
+            #menuVertical li a{
+                color:#06F;
+                margin:0px;
+                background:linear-gradient(#fff 0%,#dedede 100%);
+                background:-moz-linear-gradient(#fff 0%,#dedede 100%);
+                background:-ms-linear-gradient(#fff 0%,#dedede 100%);
+                background:-o-linear-gradient(#fff 0%,#dedede 100%);
+                background:-webkit-linear-gradient(#fff 0%,#dedede 100%);
+                border:solid 1px #f9f9f9;
+                border-radius:15px;
+                padding:10px;
+            }
+            #menuVertical li a:hover{
+                background:linear-gradient(#DEDEDE 0%, #FFF 100%);
+                background:-moz-linear-gradient(#DEDEDE 0%, #FFF 100%);
+                background:-ms-linear-gradient(#DEDEDE 0%, #FFF 100%);
+                background:-o-linear-gradient(#DEDEDE 0%, #FFF 100%);
+                background:-webkit-linear-gradient(#DEDEDE 0%, #FFF 100%);
+                border-radius:15px;
+                border:solid 4px #877AFC;
+                color:#648B7C;
+            }
+
+            
+// div principal            
+ #Contenedor {
+     background-color: red;
+     float: left;
+     clear: left;
+     position: relative;
+     width:160px;
+     margin-top: 15px;
+     margin-left: 25px;
+     margin-right: auto
+              
+ }
+#enlaces ul {
+                display: block;
+                margin-top: 15px;
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+                border:solid 5px #7676A8; // ori 8181F7
+                border-radius:9px;
+                width:160px;
+                float: right;
+                clear: right;
+                padding:10px;
+                /*Quitar vineras*/
+                list-style-type:none;
+                background: -webkit-radial-gradient(center, circle, #FFFFFF 15%, #006699 200%);
+                background: -moz-radial-gradient(center, circle, #FFFFFF 15%, #006699 200%);
+            }
+            
+            #enlaces ul a{
+                /*Quitar subrayado*/
+                text-decoration: none;
+                //ackground-position: center;
+                padding-right: 22px;
+                padding-left: 22px;
+                display: block;
+                line-height: 25px;
+                font-family: Georgia, "Times New Roman", Times, serif, fantasy;
+                font-size: 12px;
+            }
+
+            #enlaces li a{
+                color:#06F;
+                margin:0px;
+                background:linear-gradient(#fff 0%,#dedede 100%);
+                background:-moz-linear-gradient(#fff 0%,#dedede 100%);
+                background:-ms-linear-gradient(#fff 0%,#dedede 100%);
+                background:-o-linear-gradient(#fff 0%,#dedede 100%);
+                background:-webkit-linear-gradient(#fff 0%,#dedede 100%);
+                border:solid 1px #f9f9f9;
+                border-radius:15px;
+                padding:10px;
+            }
+            #enlaces li a:hover{
+                background:linear-gradient(#DEDEDE 0%, #FFF 100%);
+                background:-moz-linear-gradient(#DEDEDE 0%, #FFF 100%);
+                background:-ms-linear-gradient(#DEDEDE 0%, #FFF 100%);
+                background:-o-linear-gradient(#DEDEDE 0%, #FFF 100%);
+                background:-webkit-linear-gradient(#DEDEDE 0%, #FFF 100%);
+                border-radius:15px;
+                border:solid 4px #877AFC;
+                color:#648B7C;
+   
+}
+
